@@ -5,8 +5,8 @@
 
 const carros = {
     nome: "Camaro",
-    modelo: "xpto Cam"
-    cores: ["amarelo", "preto"],
+    modelo: "xpto Cam",
+    cores: ["amarelo" , "preto"],
 }
 
 carros.modelo = "Fusca"
