@@ -8,4 +8,4 @@ export default config = function () {
         health: 100
     }
     }
-export default config
+export default configBancoD
