@@ -6,6 +6,7 @@ const porta = 8081
 
 const home = path.join(__dirname, 'pages/index.html')
 const sobre = path.join(__dirname, 'pages/sobre.html')
+const error = path.join(__dirname, 'pages/404.html')
 
 
 const server = http.createServer((req, res)=>{
@@ -14,17 +15,23 @@ const server = http.createServer((req, res)=>{
 
     if(caminhoUrl === '/'){
 
-        res.statusCode = '200'
+        res.statusCode = '404'
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
         return res.end(fs.readFileSync(home, 'utf-8'))
     } 
     
     if(caminhoUrl === '/sobre'){
 
-        res.statusCode = '200'
+        res.statusCode = '404'
         res.setHeader('Content-Type', 'text/html; charset=utf-8')
         return res.end(fs.readFileSync(sobre, 'utf-8'))
     } 
+    if(caminhoUrl === '/404'){
+
+        res.statusCode = '404'
+        res.setHeader('Content-Type', 'text/html; charset=utf-8')
+        return res.end(fs.readFileSync(error, 'utf-8'))
+    }
     else { 
 
     res.statusCode = '401'

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PÁGINA INICIAL | K-POP</title>
-    <!-- Ícones Lucide Corrigidos para Funcionamento -->
+    <title>404 PÁGINA NÃO ENCONTRADA</title>
+    <!-- Ícones Lucide para manter a identidade visual -->
     <script src="https://unpkg.com"></script>
     <style>
         @import url('https://googleapis.com');
@@ -28,7 +28,7 @@
             position: relative;
         }
 
-        /* Efeitos de Luz de Fundo - Temática Azul Neon */
+        /* Efeitos de Luz de Fundo - Idênticos à Página Home */
         body::before {
             content: '';
             position: absolute;
@@ -79,7 +79,7 @@
                 justify-content: center;
             }
             h3 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
 
@@ -90,12 +90,13 @@
             gap: 1.5rem;
         }
 
-        /* Badge Superior em Degradê Azul */
+        /* Badge Superior de Alerta */
         .badge {
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+            background: linear-gradient(90deg, #d60000, #ff4343);
+            background: linear-gradient(90deg, #0052d4, #00c6ff);
             padding: 0.6rem 1.2rem;
             border-radius: 50px;
             width: fit-content;
@@ -103,17 +104,18 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            box-shadow: 0 4px 20px rgba(67, 100, 247, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Título de Alto Impacto */
         h3 {
-            font-size: 4.5rem;
+            font-size: 4rem;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -0.03em;
             line-height: 0.95;
+            background: linear-gradient(to right, #ffffff 20%, #ff4d4d 70%, #ff0000 100%);
             background: linear-gradient(to right, #ffffff 30%, #00c6ff 70%, #0072ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -126,7 +128,7 @@
             max-width: 100%;
         }
 
-        /* Container de Botões */
+        /* Container do Botão */
         .button-group {
             display: flex;
             flex-direction: column;
@@ -134,7 +136,7 @@
             margin-top: 1rem;
         }
 
-        /* Links Estilizados como Botões Cyperpunk/Neon Azul */
+        /* Link Estilizado Como Botão Neon Azul */
         .cta-link {
             display: flex;
             align-items: center;
@@ -178,18 +180,6 @@
             box-shadow: 0 0 30px rgba(0, 198, 255, 0.5);
             transform: translateY(-4px);
         }
-
-        /* Variação discreta para o segundo botão */
-        .cta-link.secondary {
-            border-color: #0052d4;
-            background: rgba(0, 82, 212, 0.05);
-        }
-        
-        .cta-link.secondary:hover {
-            background: #0052d4;
-            color: #ffffff;
-            box-shadow: 0 0 30px rgba(0, 82, 212, 0.5);
-        }
     </style>
 </head>
 <body>
@@ -198,23 +188,26 @@
         <!-- Conteúdo Principal -->
         <section class="content">
             <div class="badge">
-                <i data-lucide="music-4" style="width: 16px; height: 16px;"></i>
-                <span>All Kill Area</span>
+                <i data-lucide="alert-circle" style="width: 16px; height: 16px;"></i>
+                <span>Erro de Sistema</span>
             </div>
             
-            <h3>PÁGINA HOME</h3>
+            <h3>404 PÁGINA NÃO ENCONTRADA!</h3>
             
-            <p>Sinta a batida, acompanhe os fanchants e viva a experiência completa da cultura pop coreana. O universo dos seus idols favoritos reunido em um espaço vibrante feito de fã para fã.</p>
+            <p>PARECE QUE ESTE CONCEITO SAIU DO CRONOGRAMA. 
+                A PÁGINA QUE VOCÊ TENTOU ACESSAR NÃO FOI LOCALIZADA OU MUDOU DE FREQUÊNCIA.</p>
             
-            <!-- Grupo de botões com links originais intocados -->
+            <!-- Grupo de botões com link original intocado -->
+            <div class="button-group">
+                <a href="/" class="cta-link">
+                    <span>PÁGINA INICIAL</span>
+                    <i data-lucide="home" style="width: 18px; height: 18px;"></i>
+                </a>
+            </div>
             <div class="button-group">
                 <a href="/sobre" class="cta-link">
                     <span>PÁGINA SOBRE NÓS</span>
-                    <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i>
-                </a>
-                <a href="/404" class="cta-link secondary">
-                    <span>404 ERROR</span>
-                    <i data-lucide="alert-triangle" style="width: 18px; height: 18px;"></i>
+                    <i data-lucide="home" style="width: 18px; height: 18px;"></i>
                 </a>
             </div>
         </section>
