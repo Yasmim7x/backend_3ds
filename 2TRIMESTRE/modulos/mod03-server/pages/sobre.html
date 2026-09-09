@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 PÁGINA NÃO ENCONTRADA</title>
-    <!-- Ícones Lucide para manter a identidade visual -->
+    <title>PÁGINA SOBRE NÓS</title>
+    
+    <!-- CORREÇÃO 1: Script do Lucide completo para renderizar os ícones -->
     <script src="https://unpkg.com"></script>
+    
     <style>
+        <!-- CORREÇÃO 2: Importação correta das fontes do Google Fonts (Poppins e Inter) -->
         @import url('https://googleapis.com');
 
         * {
@@ -28,7 +31,7 @@
             position: relative;
         }
 
-        /* Efeitos de Luz de Fundo - Idênticos à Página Home */
+        /* Efeitos de Luz de Fundo - Idênticos às Páginas Anteriores */
         body::before {
             content: '';
             position: absolute;
@@ -90,13 +93,12 @@
             gap: 1.5rem;
         }
 
-        /* Badge Superior de Alerta */
+        /* Badge Superior de Identificação */
         .badge {
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            background: linear-gradient(90deg, #d60000, #ff4343);
-            background: linear-gradient(90deg, #0052d4, #00c6ff);
+            background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
             padding: 0.6rem 1.2rem;
             border-radius: 50px;
             width: fit-content;
@@ -104,7 +106,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            box-shadow: 0 4px 20px rgba(0, 198, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(67, 100, 247, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -115,7 +117,6 @@
             text-transform: uppercase;
             letter-spacing: -0.03em;
             line-height: 0.95;
-            background: linear-gradient(to right, #ffffff 20%, #ff4d4d 70%, #ff0000 100%);
             background: linear-gradient(to right, #ffffff 30%, #00c6ff 70%, #0072ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -188,14 +189,14 @@
         <!-- Conteúdo Principal -->
         <section class="content">
             <div class="badge">
-                <i data-lucide="alert-circle" style="width: 16px; height: 16px;"></i>
-                <span>Erro de Sistema</span>
+                <i data-lucide="users" style="width: 16px; height: 16px;"></i>
+                <span>Nossa História</span>
             </div>
             
-            <h3>404 PÁGINA NÃO ENCONTRADA!</h3>
+            <h3>PÁGINA SOBRE NÓS</h3>
             
-            <p>PARECE QUE ESTE CONCEITO SAIU DO CRONOGRAMA. 
-                A PÁGINA QUE VOCÊ TENTOU ACESSAR NÃO FOI LOCALIZADA OU MUDOU DE FREQUÊNCIA.</p>
+            <p>Nascemos da batida, dos conceitos inovadores e da paixão que une fandoms pelo mundo inteiro. Somos um portal dedicado a conectar entusiastas do K-Pop, 
+                trazendo informações detalhadas e celebrando o impacto cultural e musical dos seus idols favoritos em um só lugar.</p>
             
             <!-- Grupo de botões com link original intocado -->
             <div class="button-group">
@@ -205,8 +206,8 @@
                 </a>
             </div>
             <div class="button-group">
-                <a href="/sobre" class="cta-link">
-                    <span>PÁGINA SOBRE NÓS</span>
+                <a href="/404" class="cta-link">
+                    <span>404 ERROR</span>
                     <i data-lucide="home" style="width: 18px; height: 18px;"></i>
                 </a>
             </div>
