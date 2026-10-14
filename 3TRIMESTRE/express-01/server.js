@@ -10,6 +10,14 @@ app.use(express.static(path.join(baseDir, 'src/public')))
 app.get('/', (req, res) => {
     res.sendFile('src/pages/index.html', {root: baseDir})
 })
-
+app.get('/sobre', (req, res) => {
+    res.sendFile('src/pages/sobre.html', {root: baseDir})
+})
+app.get('/servicos', (req, res) => {
+    res.sendFile('src/pages/servicos.html', {root: baseDir})
+})
+app.get('/contatos', (req, res) => {
+    res.sendFile('src/pages/contatos.html', {root: baseDir})
+})
 
 app.listen(PORT, () => { console.log('Servidor vivo!'+PORT)})

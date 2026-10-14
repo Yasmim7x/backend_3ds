@@ -1,0 +1,323 @@
+/* ==========================================================================
+   Configurações Globais e Paleta Luxo (Rosa, Bege, Branco e Dourado)
+   ========================================================================== */
+:root {
+    --branco-cetim: #FFFDFB;        /* Fundo principal ultra limpo, iluminado e sofisticado */
+    --rosa-sofisticado: #F7D6D0;    /* O rosé delicado e chique para blocos e destaques */
+    --rosa-hover: #F2C2B8;          /* Variação do rosa para efeitos de passar o mouse */
+    --bege-luxo: #EFE6DD;           /* Tom de bege suave para criar contrastes elegantes */
+    --dourado: #D4AF37;             /* Dourado joia metálico para detalhes marcantes */
+    --dourado-escuro: #B8901C;      /* Dourado de transição para links ativos */
+    --texto-escuro: #3A3535;        /* Cinza quente escuro para leitura confortável e elegante */
+    --texto-suave: #6E6666;         /* Para descrições secundárias */
+    
+    --fonte-titulo: 'Cormorant Garamond', serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+    
+    --transicao-luxo: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --sombra-premium: 0 15px 40px rgba(212, 175, 55, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--branco-cetim);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Barra Superior (Top Bar Rosé)
+   ========================================================================== */
+.top-bar {
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.main-header {
+    background-color: var(--branco-cetim);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    transition: var(--transicao-luxo);
+}
+
+.logo a:hover {
+    color: var(--dourado);
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    transition: var(--transicao-luxo);
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--dourado);
+    transition: var(--transicao-luxo);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Seção Hero (Visual Limpo e Impactante - Lado a Lado)
+   ========================================================================== */
+.hero-section {
+    background-color: var(--bege-luxo);
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+        align-items: center;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Tipografia de Impacto baseada na imagem de referência */
+.hero-title {
+    font-family: var(--fonte-titulo);
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+
+}
+
+.hero-subtitle {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+/* Botão Sólido Rosé com Linha Dourada sutil */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    padding: 16px 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: var(--transicao-luxo);
+}
+
+.btn-primary:hover {
+    background-color: var(--branco-cetim);
+    border-color: var(--dourado);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(214, 175, 55, 0.15);
+}
+
+/* Máscara da Imagem Principal */
+.hero-image-mask {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    border: 8px solid var(--branco-cetim);
+}
+
+.hero-image-mask img {
+    transition: var(--transicao-luxo);
+}
+
+.hero-section:hover .hero-image-mask img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   Seção de Apresentação da Loja (Cartão de Destaque)
+   ========================================================================== */
+.intro-section {
+    background-color: var(--branco-cetim);
+    padding: 80px 20px;
+}
+
+.intro-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--branco-cetim);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 50px 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--sombra-premium);
+}
+
+.gold-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background-color: var(--dourado);
+}
+
+.intro-title {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.intro-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.link-explore {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--texto-escuro);
+    transition: var(--transicao-luxo);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+}
+
+.link-explore:hover {
+    color: var(--dourado-escuro);
+    border-bottom-color: var(--dourado);
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Rodapé Minimalista
+   ========================================================================== */
+.main-footer {
+    background-color: var(--bege-luxo);
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* ==========================================================================
+   Responsividade Mobile Completa
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-title { font-size: 3.2rem; }
+    .hero-subtitle { margin: 0 auto 30px auto; }
+    .hero-image-mask { height: 380px; }
+    .intro-links { flex-direction: column; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-menu ul {
+        gap: 20px;
+    }
+    .intro-card { padding: 40px 20px; }
+    .intro-title { font-size: 1.6rem; }
+}
