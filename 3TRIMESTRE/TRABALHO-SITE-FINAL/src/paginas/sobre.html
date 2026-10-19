@@ -1,14 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/sobre.css">
-    <title>pagina sobre</title>
+    <!-- Links das fontes corrigidos para carregar perfeitamente -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Sobre Nós | YF Beauty</title>
 </head>
 <body>
-    <h3>Página sobre</h3>
-    <p>Detalhe Página sobre</p>
-    
+
+    <!-- Barra de Anúncio Superior -->
+    <div class="top-bar">
+        <span>CONHEÇA NOSSO ESPAÇO • ATENDIMENTO EXCLUSIVO • AGENDAMENTOS ONLINE</span>
+    </div>
+
+    <!-- Cabeçalho Elegante -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/index"> YF BEAUTY</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/index">Início</a></li>
+                    <li><a href="/sobre" class="active">Sobre Nós</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                    <li><a href="/contatos">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de Apresentação da Página -->
+    <section class="about-hero-section">
+        <div class="about-hero-container">
+            <span class="about-subtitle-top">Nossa Essência</span>
+            <h1 class="about-hero-title">A HISTÓRIA POR TRÁS DA BELEZA</h1>
+            <div class="gold-line-center"></div>
+        </div>
+    </section>
+
+    <!-- Bloco de Conteúdo Institucional -->
+    <section class="about-content-section">
+        <div class="about-grid-container">
+            <div class="about-text-block">
+                <h2 class="about-section-title">Como tudo começou</h2>
+                <p class="about-paragraph">
+                    A <strong>YF Beauty</strong> nasceu do desejo de criar mais do que um salão de beleza tradicional. Nós idealizamos um refúgio acolhedor onde a sofisticação encontra o bem-estar, proporcionando uma experiência verdadeiramente transformadora para cada cliente.
+                </p>
+                <p class="about-paragraph">
+                    Desde o primeiro dia, nosso foco tem sido os pequenos detalhes: o aroma do ambiente, o atendimento ultra personalizado e a busca incansável pelas técnicas mais modernas em cabelos, maquiagem e nail design.
+                </p>
+            </div>
+            <div class="about-image-block">
+                <div class="about-image-wrapper">
+                    <!-- Caminho da imagem corrigido para apontar para a pasta "imagens" -->
+                    <img width="300" src="../../imagens/lojabeleza.jpg" alt="LOJA DE BELEZA YF BEAUTY">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Valores Clave -->
+    <section class="values-section">
+        <div class="values-container">
+            <div class="value-card">
+                <span class="value-number">01</span>
+                <h3>Excelência</h3>
+                <p>Equipe formada por especialistas focados em entregar acabamentos perfeitos e técnicas premium.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-number">02</span>
+                <h3>Cuidado</h3>
+                <p>Seu momento de autocuidado é sagrado. Oferecemos um atendimento acolhedor e atencioso.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-number">03</span>
+                <h3>Inovação</h3>
+                <p>Sempre alinhados com as maiores tendências mundiais de estética, glamour e saúde capilar/estética.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Minimalista -->
+    <footer class="main-footer">
+        <p>&copy; 2026 YF BEAUTY. Todos os direitos reservados. Projeto GitHub.</p>
+    </footer>
+
 </body>
 </html>

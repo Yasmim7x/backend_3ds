@@ -1,14 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/servicos.css">
-    <title>pagina servicos</title>
+    <!-- Links das fontes corrigidos para carregar perfeitamente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Serviços | YF Beauty</title>
 </head>
 <body>
-    <h3>Página servicos</h3>
-    <p>Detalhe Página servicos</p>
-    
+
+    <!-- Barra de Anúncio Superior -->
+    <div class="top-bar">
+        <span>CONHEÇA NOSSO ESPAÇO • ATENDIMENTO EXCLUSIVO • AGENDAMENTOS ONLINE</span>
+    </div>
+
+    <!-- Cabeçalho Elegante -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/index"> YF BEAUTY</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/index">Início</a></li>
+                    <li><a href="/sobre">Sobre Nós</a></li>
+                    <li><a href="/servicos" class="active">Serviços</a></li>
+                    <li><a href="/contatos">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Hero - Serviços -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-side">
+                <h1 class="hero-title">NOSSOS SERVIÇOS PREMIUM</h1>
+                <p class="hero-subtitle">
+                    Vivencie experiências e rituais de beleza criados sob medida para você. Escolha o cuidado que sua autoestima merece.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Exibição dos Serviços (Design de Unhas, Cabelo e Maquiagem) -->
+    <section class="services-display-section">
+        <div class="services-container">
+            
+            <!-- Serviço 1: Cabelo -->
+            <div class="service-premium-card">
+                <div class="service-image-placeholder">
+                    <span>HAIR STYLING</span>
+                </div>
+                <div class="service-info">
+                    <h3>Cuidados Capilares</h3>
+                    <p>Cortes modernos, mechas personalizadas, tratamentos de reconstrução profunda e escovas modeladas com finalização de alta fixação e brilho luxuoso.</p>
+                  
+                </div>
+            </div>
+
+            <!-- Serviço 2: Design de Unhas -->
+            <div class="service-premium-card">
+                <div class="service-image-placeholder">
+                    <span>NAIL DESIGN</span>
+                </div>
+                <div class="service-info">
+                    <h3>Design de Unhas</h3>
+                    <p>Alongamentos em gel e fibra de vidro, esmaltação semipermanente premium, cututilagem russa e nail art minimalista com acabamento impecável.</p>
+                    <a href="/contatos" class="btn-service-action">Agendar Horário</a>
+                </div>
+            </div>
+
+            <!-- Serviço 3: Maquiagem -->
+            <div class="service-premium-card">
+                <div class="service-image-placeholder">
+                    <span>MAKEUP ART</span>
+                </div>
+                <div class="service-info">
+                    <h3>Maquiagem Profissional</h3>
+                    <p>Produções sofisticadas para eventos, maquiagem social, técnicas de contorno de passarela e preparação de pele blindada de altíssima durabilidade.</p>
+                    <a href="/contatos" class="btn-service-action">Agendar Horário</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rodapé Minimalista -->
+    <footer class="main-footer">
+        <p>&copy; 2026 YF BEAUTY. Todos os direitos reservados. Projeto GitHub.</p>
+    </footer>
+
 </body>
 </html>

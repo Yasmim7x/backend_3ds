@@ -1,4 +1,278 @@
+/* ==========================================================================
+   Configurações Globais e Paleta Luxo (Rosa, Bege, Branco e Dourado)
+   ========================================================================== */
+:root {
+    --branco-cetim: #FFFDFB;        
+    --rosa-sofisticado: #F7D6D0;    
+    --bege-luxo: #EFE6DD;           
+    --dourado: #D4AF37;             
+    --dourado-escuro: #B8901C;      
+    --texto-escuro: #3A3535;        
+    --texto-suave: #6E6666;         
+    
+    --fonte-titulo: 'Cormorant Garamond', serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+    
+    --transicao-luxo: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --sombra-premium: 0 15px 40px rgba(212, 175, 55, 0.05);
+}
+
 * {
-    background-color: rgb(43, 55, 226);
-    color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--branco-cetim);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Barra Superior (Top Bar)
+   ========================================================================== */
+.top-bar {
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.80rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.main-header {
+    background-color: var(--branco-cetim);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transicao-luxo);
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--dourado);
+    transition: var(--transicao-luxo);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Seção Hero (Painel de Entrada)
+   ========================================================================== */
+.hero-section {
+    background-color: var(--bege-luxo);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.hero-text-side {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: var(--texto-suave);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Seção de Grid de Serviços Premium (Novos Estilos Exclusivos)
+   ========================================================================== */
+.services-display-section {
+    padding: 90px 20px;
+    background-color: var(--branco-cetim);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-premium-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: var(--sombra-premium);
+    transition: var(--transicao-luxo);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-premium-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--dourado);
+}
+
+/* Placeholder elegante para colocar as fotos dos serviços depois */
+.service-image-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: var(--bege-luxo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.service-image-placeholder span {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: var(--texto-suave);
+    font-weight: 300;
+}
+
+.service-info {
+    padding: 35px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-info h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--texto-escuro);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.service-info p {
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Alinha os botões na mesma altura */
+}
+
+/* Botão de Ação Minimalista */
+.btn-service-action {
+    display: block;
+    text-align: center;
+    background-color: var(--branco-cetim);
+    color: var(--texto-escuro);
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border: 1px solid var(--dourado);
+    transition: var(--transicao-luxo);
+    margin-top: auto;
+}
+
+.btn-service-action:hover {
+    background-color: var(--rosa-sofisticado);
+    border-color: var(--rosa-sofisticado);
+}
+
+/* ==========================================================================
+   Rodapé Minimalista
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    background-color: var(--branco-cetim);
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Responsividade Mobile Adaptável
+   ========================================================================== */
+@media (max-width: 992px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .hero-title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
 }

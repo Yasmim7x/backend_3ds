@@ -1,4 +1,330 @@
+/* ==========================================================================
+   Configurações Globais e Paleta Luxo (Rosa, Bege, Branco e Dourado)
+   ========================================================================== */
+:root {
+    --branco-cetim: #FFFDFB;        /* Fundo principal ultra limpo, iluminado e sofisticado */
+    --rosa-sofisticado: #F7D6D0;    /* O rosé delicado e chique para blocos e destaques */
+    --rosa-hover: #F2C2B8;          /* Variação do rosa para efeitos de passar o mouse */
+    --bege-luxo: #EFE6DD;           /* Tom de bege suave para criar contrastes elegantes */
+    --dourado: #D4AF37;             /* Dourado joia metálico para detalhes marcantes */
+    --dourado-escuro: #B8901C;      /* Dourado de transição para links ativos */
+    --texto-escuro: #3A3535;        /* Cinza quente escuro para leitura confortável e elegante */
+    --texto-suave: #6E6666;         /* Para descrições secundárias */
+    
+    --fonte-titulo: 'Cormorant Garamond', serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+    
+    --transicao-luxo: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --sombra-premium: 0 15px 40px rgba(212, 175, 55, 0.08);
+}
+
 * {
-    background-color: rgb(43, 226, 58);
-    color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--branco-cetim);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Barra Superior (Top Bar Rosé)
+   ========================================================================== */
+.top-bar {
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.80rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* ==========================================================================
+   Banner de Título Superior (Hero)
+   ========================================================================== */
+.about-hero-section {
+    background-color: var(--bege-luxo);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.about-subtitle-top {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--texto-suave);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-hero-title {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--texto-escuro);
+    letter-spacing: 5px;
+    line-height: 1.2;
+}
+
+.gold-line-center {
+    width: 60px;
+    height: 1px;
+    background-color: var(--dourado);
+    margin: 25px auto 0 auto;
+}
+
+/* ==========================================================================
+   Grid de Informações Lado a Lado (Proporções Corrigidas)
+   ========================================================================== */
+.about-content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 20px;
+}
+
+.about-grid-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* O bloco de texto ocupa uma proporção equilibrada */
+.about-text-block {
+    flex: 1.1;
+    min-width: 320px;
+}
+
+.about-section-title {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--texto-escuro);
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.about-paragraph {
+    font-family: var(--fonte-corpo);
+    color: var(--texto-suave);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* O bloco da imagem ganha um peso visual ligeiramente maior */
+.about-image-block {
+    flex: 1.3;
+    min-width: 320px;
+}
+
+/* Moldura e dimensões ampliadas proporcionalmente */
+.about-image-wrapper {
+    position: relative;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 15px;
+    background-color: var(--branco-cetim);
+    width: 100%;
+    max-width: 550px; /* Aumentado de 450px para 550px */
+    height: 520px;    /* Altura ajustada para manter o aspecto vertical elegante */
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: var(--sombra-premium);
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transicao-luxo);
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.03); /* Efeito sutil de aproximação */
+}
+
+/* ==========================================================================
+   Bloco Inferior de Três Cards com Valores
+   ========================================================================== */
+.values-section {
+    background-color: rgba(239, 230, 221, 0.4); 
+    padding: 90px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.value-card {
+    background-color: var(--branco-cetim);
+    padding: 45px 35px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: var(--sombra-premium);
+    transition: var(--transicao-luxo);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+}
+
+.value-number {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--dourado);
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.value-card h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: var(--texto-escuro);
+}
+
+.value-card p {
+    font-family: var(--fonte-corpo);
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Rodapé Minimalista
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    background-color: var(--branco-cetim);
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Correção do Cabeçalho e Menu de Navegação
+   ========================================================================== */
+.nav-menu ul {
+    display: flex !important;
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+.nav-menu li {
+    list-style: none !important;
+    display: inline-block;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    text-decoration: none !important;
+    transition: var(--transicao-luxo);
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--dourado);
+    transition: var(--transicao-luxo);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+}
+
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   Responsividade Adaptável (Mobile)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .about-grid-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .about-image-wrapper {
+        max-width: 100%;
+        height: 450px; /* Reduz ligeiramente em tablets para melhor leitura */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
 }
