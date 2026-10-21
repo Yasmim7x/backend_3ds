@@ -1,4 +1,430 @@
-* {
-    background-color: rgb(226, 43, 119);
-    color: antiquewhite;
+/* ==========================================================================
+   Configurações Globais e Paleta Luxo (Rosa, Bege, Branco e Dourado)
+   ========================================================================== */
+:root {
+    --branco-cetim: #FFFDFB;        /* Fundo principal ultra limpo, iluminado e sofisticado */
+    --rosa-sofisticado: #F7D6D0;    /* O rosé delicado e chique para blocos e destaques */
+    --rosa-hover: #F2C2B8;          /* Variação do rosa para efeitos de passar o mouse */
+    --bege-luxo: #EFE6DD;           /* Tom de bege suave para criar contrastes elegantes */
+    --dourado: #D4AF37;             /* Dourado joia metálico para detalhes marcantes */
+    --dourado-escuro: #B8901C;      /* Dourado de transição para links ativos */
+    --texto-escuro: #3A3535;        /* Cinza quente escuro para leitura confortável e elegante */
+    --texto-suave: #6E6666;         /* Para descrições secundárias */
+    
+    --fonte-titulo: 'Cormorant Garamond', serif;
+    --fonte-corpo: 'Montserrat', sans-serif;
+    
+    --transicao-luxo: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --sombra-premium: 0 15px 40px rgba(212, 175, 55, 0.08);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--branco-cetim);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Barra Superior (Top Bar Rosé)
+   ========================================================================== */
+.top-bar {
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.80rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.main-header {
+    background-color: var(--branco-cetim);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    transition: var(--transicao-luxo);
+}
+
+.logo a:hover {
+    color: var(--dourado);
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-suave);
+    transition: var(--transicao-luxo);
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--dourado);
+    transition: var(--transicao-luxo);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Seção Hero
+   ========================================================================== */
+.hero-section {
+    background-color: var(--bege-luxo);
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--fonte-titulo);
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    font-weight: 300;
+    max-width: 480px;
+    margin: 0 auto 40px auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    padding: 16px 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: var(--transicao-luxo);
+}
+
+.btn-primary:hover {
+    background-color: var(--branco-cetim);
+    border-color: var(--dourado);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(214, 175, 55, 0.15);
+}
+
+/* ==========================================================================
+   Seção de Apresentação da Loja (Cartão de Destaque)
+   ========================================================================== */
+.intro-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--branco-cetim);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 50px 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: var(--sombra-premium);
+}
+
+.gold-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background-color: var(--dourado);
+}
+
+.intro-title {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--texto-escuro);
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    max-width: 750px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Nova Seção de Equipe (Customizada para Contatos)
+   ========================================================================== */
+.team-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background-color: var(--branco-cetim);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    padding: 25px;
+    text-align: center;
+    transition: var(--transicao-luxo);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado);
+    box-shadow: var(--sombra-premium);
+}
+
+.member-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    border: 2px solid var(--rosa-sofisticado);
+    background-color: var(--bege-luxo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    color: var(--texto-suave);
+}
+
+.member-name {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    color: var(--texto-escuro);
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado-escuro);
+    margin-bottom: 15px;
+}
+
+.member-email {
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    word-break: break-all;
+}
+
+/* ==========================================================================
+   Layout de Blocos: Informações e Formulário
+   ========================================================================== */
+.contact-layout {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+}
+
+.contact-info-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item h4 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    color: var(--texto-escuro);
+    margin-bottom: 5px;
+}
+
+.info-description {
+    margin: 0; 
+    text-align: left;
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    font-weight: 300;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dourado-escuro);
+}
+
+.info-value {
+    font-size: 1.2rem;
+    font-family: var(--fonte-titulo);
+}
+
+/* Estrutura do Formulário */
+.form-container-block {
+    background-color: var(--bege-luxo);
+    padding: 40px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.form-block-title {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 25px;
+    color: var(--texto-escuro);
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--texto-escuro);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    background-color: var(--branco-cetim);
+    font-family: var(--fonte-corpo);
+    color: var(--texto-escuro);
+    transition: var(--transicao-luxo);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--dourado);
+    background-color: #fff;
+}
+
+.btn-submit {
+    display: inline-block;
+    background-color: var(--rosa-sofisticado);
+    color: var(--texto-escuro);
+    padding: 16px 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: var(--transicao-luxo);
+}
+
+.btn-submit:hover {
+    background-color: var(--branco-cetim);
+    outline: 1px solid var(--dourado);
+    box-shadow: 0 10px 25px rgba(214, 175, 55, 0.15);
+}
+.main-footer {
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* ==========================================================================
+   Rodapé Minimalista
+

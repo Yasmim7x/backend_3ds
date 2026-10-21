@@ -1,14 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos | Nossa Equipe</title>
+    <!-- Links para as fontes configuradas no CSS -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Link para o seu arquivo CSS externo -->
     <link rel="stylesheet" href="../../css/contatos.css">
-    <title>pagina contatos</title>
 </head>
 <body>
-    <h3>Página contatos</h3>
-    <p>Detalhe Página contatos</p>
-    
+
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        CONHEÇA NOSSO ESPAÇO • ATENDIMENTO EXCLUSIVO • AGENDAMENTOS ONLINE
+    </div>
+
+    <!-- Cabeçalho / Menu de Navegação -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#">YF BEAUTY</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                   <li><a href="/">Início</a></li>
+                    <li><a href="/sobre">sobre nós</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                    <li><a href="/contatos" class="active">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Hero da Página de Contatos -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Fale Conosco</h1>
+                <p class="hero-subtitle">Nossa equipe especializada está pronta para transformar a sua experiência em algo memorável. Entre em contato ou envie uma mensagem.</p>
+                <a href="#mensagem" class="btn-primary">Enviar Mensagem</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Apresentação dos 5 Funcionários -->
+    <section class="team-section">
+        <div class="intro-card">
+            <div class="gold-line"></div>
+            <h2 class="intro-title">Conheça Nossa Equipe</h2>
+            <p class="intro-description">Especialistas dedicados a oferecer o melhor suporte e curadoria para você.</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Funcionário 1 -->
+            <div class="member-card">
+                <div class="member-avatar">AA</div>
+                <h3 class="member-name">Benjamin Choi</h3>
+                <p class="member-role">Gerente Geral</p>
+            </div>
+
+            <!-- Funcionário 2 -->
+            <div class="member-card">
+                <div class="member-avatar">CC</div>
+                <h3 class="member-name">Georgina Shin</h3>
+                <p class="member-role">Consultor de Moda</p>
+            </div>
+
+            <!-- Funcionário 3 -->
+            <div class="member-card">
+                <div class="member-avatar">BM</div>
+                <h3 class="member-name">Benedict Kwon</h3>
+                <p class="member-role">Atendimento Vip</p>
+            </div>
+
+            <!-- Funcionário 4 -->
+            <div class="member-card">
+                <div class="member-avatar">FR</div>
+                <h3 class="member-name">Hermione Lee</h3>
+                <p class="member-role">Pós-Venda</p>
+            </div>
+
+            <!-- Funcionário 5 -->
+            <div class="member-card">
+                <div class="member-avatar">MS</div>
+                <h3 class="member-name">Esther Kim</h3>
+                <p class="member-role">Suporte Online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contatos Gerais e Mensagem -->
+    <section class="contact-layout" id="mensagem">
+        <!-- Informações de Contato da Loja -->
+        <div class="contact-info-block">
+            <div class="info-item">
+                <h4>Canais Diretos</h4>
+                <p class="info-description">Se preferir um contato imediato, utilize nossos canais corporativos abaixo.</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">Telefone Geral</p>
+                <p class="info-value">(11) 4003-0000</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">WhatsApp Boutique</p>
+                <p class="info-value">(11) 99999-8888</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">E-mail Corporativo</p>
+                <p class="info-value">yfbeauty@loja.com</p>
+            </div>
+        </div>
+
+        <!-- Formulário de Mensagem -->
+        <div class="form-container-block">
+            <h3 class="form-block-title">Envie uma Mensagem</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" class="form-control" required placeholder="Ex: Maria Souza">
+                </div>
+                <div class="form-group">
+                    <label for="email">Seu E-mail</label>
+                    <input type="email" id="email" class="form-control" required placeholder="Ex: maria@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem-texto">Mensagem</label>
+                    <textarea id="mensagem-texto" class="form-control" rows="5" required placeholder="Como podemos ajudar você hoje?"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        &copy; 2026 Maison Luxo. Todos os direitos reservados.
+    </footer>
+
 </body>
 </html>
