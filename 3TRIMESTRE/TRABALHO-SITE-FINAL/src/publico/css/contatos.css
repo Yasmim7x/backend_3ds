@@ -424,6 +424,30 @@ a {
     letter-spacing: 1px;
     border-top: 1px solid rgba(212, 175, 55, 0.1);
 }
+.member-avatar {
+    width: 150px;                  /* Largura da foto (ajuste como preferir) */
+    height: 150px;                 /* Altura da foto (deve ser igual à largura) */
+    border-radius: 50%;           /* Deixa a imagem perfeitamente redonda */
+    object-fit: cover;            /* Garante que a foto não distorça ou amasse */
+    display: block;
+    margin: 0 auto 15px auto;     /* Centraliza e joga o nome um pouco para baixo */
+}
+/* Oculta a mensagem inicialmente e adiciona estilização */
+/* Garante que o texto de sucesso comece escondido e fique estilizado */
+#mensagemSucesso {
+    display: none; 
+    padding: 15px;
+    text-align: center;
+    color: #833f62;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    border: 1px solid #833f62;
+    background-color: #f4fbf6;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
 
 /* ==========================================================================
    Rodapé Minimalista

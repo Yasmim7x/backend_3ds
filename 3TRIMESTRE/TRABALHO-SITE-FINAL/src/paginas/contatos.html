@@ -7,7 +7,7 @@
     <!-- Links para as fontes configuradas no CSS -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <!-- Link para o seu arquivo CSS externo -->
     <link rel="stylesheet" href="../../css/contatos.css">
 </head>
@@ -54,42 +54,43 @@
             <p class="intro-description">Especialistas dedicados a oferecer o melhor suporte e curadoria para você.</p>
         </div>
 
-        <div class="team-grid">
+                <div class="team-grid">
             <!-- Funcionário 1 -->
             <div class="member-card">
-                <div class="member-avatar">AA</div>
+                <img src="../../imagens/jk.webp" alt="Benjamin Choi" class="member-avatar">
                 <h3 class="member-name">Benjamin Choi</h3>
                 <p class="member-role">Gerente Geral</p>
             </div>
 
             <!-- Funcionário 2 -->
             <div class="member-card">
-                <div class="member-avatar">CC</div>
+                <img src="../../imagens/sadie.webp" alt="Georgina Shin" class="member-avatar">
                 <h3 class="member-name">Georgina Shin</h3>
                 <p class="member-role">Consultor de Moda</p>
             </div>
 
             <!-- Funcionário 3 -->
             <div class="member-card">
-                <div class="member-avatar">BM</div>
+                <img src="../../imagens/suga.webp" alt="Benedict Kwon" class="member-avatar">
                 <h3 class="member-name">Benedict Kwon</h3>
                 <p class="member-role">Atendimento Vip</p>
             </div>
 
             <!-- Funcionário 4 -->
             <div class="member-card">
-                <div class="member-avatar">FR</div>
+                <img src="../../imagens/emma.webp" alt="Hermione Lee" class="member-avatar">
                 <h3 class="member-name">Hermione Lee</h3>
                 <p class="member-role">Pós-Venda</p>
             </div>
 
             <!-- Funcionário 5 -->
             <div class="member-card">
-                <div class="member-avatar">MS</div>
+                <img src="../../imagens/megan.webp" alt="Esther Kim" class="member-avatar">
                 <h3 class="member-name">Esther Kim</h3>
                 <p class="member-role">Suporte Online</p>
             </div>
         </div>
+
     </section>
 
     <!-- Seção de Contatos Gerais e Mensagem -->
@@ -116,8 +117,8 @@
 
         <!-- Formulário de Mensagem -->
         <div class="form-container-block">
-            <h3 class="form-block-title">Envie uma Mensagem</h3>
-            <form action="#" method="POST">
+            <h3 class="form-block-title">Envie uma Mensagem:</h3>
+            <form id="meuFormulario" action="#" method="POST">
                 <div class="form-group">
                     <label for="nome">Seu Nome</label>
                     <input type="text" id="nome" class="form-control" required placeholder="Ex: Maria Souza">
@@ -132,12 +133,34 @@
                 </div>
                 <button type="submit" class="btn-submit">Enviar</button>
             </form>
+            <div id="mensagemSucesso">
+                Sua mensagem foi enviada com sucesso! 
+                Agradecemos o contato!!
+            </div>
         </div>
     </section>
 
     <footer class="main-footer">
-        &copy; 2026 Maison Luxo. Todos os direitos reservados.
+        &copy; 2026 YF BEAUTY. Todos os direitos reservados.
     </footer>
+
+    <script>
+        document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o erro e o recarregamento da página
+            
+            // Exibe a mensagem de sucesso na tela temporariamente
+            var msg = document.getElementById('mensagemSucesso');
+            msg.style.display = 'block'; 
+            
+            // Limpa o formulário imediatamente para o próximo preenchimento
+            this.reset(); 
+            
+            // Esconde a mensagem automaticamente após 4 segundos
+            setTimeout(function() {
+                msg.style.display = 'none';
+            }, 4000);
+        });
+    </script>
 
 </body>
 </html>
